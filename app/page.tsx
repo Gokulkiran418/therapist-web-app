@@ -1,7 +1,17 @@
+import Hero from './components/Hero';
+import About from './components/About';
+import Services from './components/Services';
+import FAQ from './components/FAQ';
+import Contact from './components/Contact';
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-3xl font-bold text-center mt-10">Coming Soon</h1>
-    </main>
+    <>
+      <Hero />
+      <About />
+      <Services />
+      <FAQ />
+      <Contact />
+    </>
   );
 }
