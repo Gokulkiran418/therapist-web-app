@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import { HiSparkles } from 'react-icons/hi';
 
 export default function Hero() {
   const [yearsCount, setYearsCount] = useState(0);
@@ -111,9 +112,10 @@ export default function Hero() {
           Media Mentions
         </span>
       </div>
-  <button className="px-6 py-3 mt-4 text-blue-800 rounded-lg bg-gradient-to-r from-white via-blue-50 to-pink-100 hover:from-blue-50 hover:via-pink-100 hover:to-white transition">
-    <span className="mr-2">★</span> Start Healing Today
-  </button>
+  <button className="px-6 py-3 mt-4 text-blue-800 rounded-lg bg-gradient-to-r from-white via-blue-50 to-pink-100 hover:from-blue-50 hover:via-pink-100 hover:to-white transition flex items-center">
+  <HiSparkles className="mr-2 text-lg" />
+  Start Healing Today
+</button>
 </div>
       </section>
 
