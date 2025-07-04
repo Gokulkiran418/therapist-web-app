@@ -9,6 +9,11 @@
   font-style: italic;
   color: #2C4D4A; /* Matches the teal-green shade in the image */
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
 @layer base {
   body {
     @apply bg-white text-slate-900;
