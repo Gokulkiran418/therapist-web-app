@@ -71,7 +71,7 @@ export default function Contact() {
 };
 
   return (
-  <section className="bg-teal-100 py-12 px-4">
+  <section className="bg-teal-100 py-12 px-4 scroll-mt-16"id="contact">
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
       {/* Left Info Column */}
       <div className="md:w-1/2 text-[#2C4D4A] space-y-4 text-sm">

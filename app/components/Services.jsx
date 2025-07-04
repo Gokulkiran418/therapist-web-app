@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <div>
       {/* Services Section */}
-      <section className="bg-white py-20 relative">
+      <section className="bg-white py-20 relative scroll-mt-16" id="services">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-left mb-8 text-[#2C4D4A]">
             How I Help

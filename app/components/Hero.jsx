@@ -71,7 +71,7 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section
+      <section id="hero"
         className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
         style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
       >
@@ -112,10 +112,12 @@ export default function Hero() {
           Media Mentions
         </span>
       </div>
-  <button className="px-6 py-3 mt-4 text-blue-800 rounded-lg bg-gradient-to-r from-white via-blue-50 to-pink-100 hover:from-blue-50 hover:via-pink-100 hover:to-white transition flex items-center">
-  <HiSparkles className="mr-2 text-lg" />
-  Start Healing Today
-</button>
+      <div className="mt-6 flex justify-center">
+      <button className="px-6 py-3 text-blue-800 rounded-lg bg-gradient-to-r from-white via-blue-50 to-pink-100 hover:from-blue-50 hover:via-pink-100 hover:to-white transition flex items-center">
+        <HiSparkles className="mr-2 text-lg" />
+        Start Healing Today
+      </button>
+    </div>
 </div>
       </section>
 
