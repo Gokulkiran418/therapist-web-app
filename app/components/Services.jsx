@@ -1,86 +1,94 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import React from 'react';
 
 export default function Services() {
   return (
-    <section className="bg-[#F9F6EF] py-20">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-16">
-          Areas of Focus
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          
-          {/* Card 1 */}
-          <div>
-            <div className="w-56 h-56 mx-auto mb-6 rounded-full overflow-hidden">
-              <Image
-                src="/images/healthcare.jpg"
-                alt="Therapy for Healthcare Providers"
-                width={300}
-                height={300}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <h3 className="text-lg font-medium mb-3">
-              Therapy for Healthcare Providers and Students
-            </h3>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              The care you provide for others may be driving you to seek therapy, whether due to burnout,
-              compassion fatigue, imposter syndrome, people-pleasing tendencies, or perfectionism. Whether
-              you're in pre-professional school, undergoing training, or reflecting on a long career in
-              healthcare, we can address the unique stressors of your professional environment along with
-              any challenges you may be facing in other areas of your life.
-            </p>
-          </div>
+    <div>
+      {/* Services Section */}
+      <section className="bg-white py-20 relative">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-left mb-8 text-[#2C4D4A]">
+            How I Help
+          </h2>
 
-          {/* Card 2 */}
-          <div>
-            <div className="w-56 h-56 mx-auto mb-6 rounded-full overflow-hidden">
-              <Image
-                src="/images/trauma.jpg"
-                alt="Therapy for Trauma and Grief"
-                width={300}
-                height={300}
-                className="object-cover w-full h-full"
-              />
+          <div className="flex flex-col md:flex-row md:space-x-8 space-y-6 md:space-y-0">
+            {/* Card 1 */}
+            <div className="group w-full md:w-[26rem] bg-[#B5D3D2] rounded-md p-4 border border-black shadow-sm overflow-hidden">
+              <div className="p-2 pr-6 transform transition-transform duration-300 group-hover:translate-x-6">
+                <img
+                  src="/images/calmperson.jpg"
+                  alt="Individual Counseling"
+                  className="w-full h-30 object-cover rounded-md mb-3"
+                />
+                <h3 className="text-sm font-bold text-[#2C4D4A] mb-1 leading-tight">
+                  Anxiety & Stress Management 
+                </h3>
+                <p className="text-xs text-[#2C4D4A] mb-3 leading-tight">
+                   Support for navigating anxious thoughts, managing stress, and building emotional resilience in a safe, therapeutic space.
+                </p>
+                <button className="w-full border border-[#2C4D4A] text-[#2C4D4A] py-1.5 text-xs rounded-md hover:bg-[#2C4D4A] hover:text-white transition">
+                  Learn More
+                </button>
+              </div>
             </div>
-            <h3 className="text-lg font-medium mb-3">
-              Therapy for Trauma and Grief
-            </h3>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              Life’s challenges, whether a difficult childhood, a traumatic event or series of events,
-              or the loss of someone or something deeply meaningful, can lead to profound experiences
-              of trauma and grief. Therapy offers a supportive space to process these experiences, care
-              for yourself amidst painful thoughts and emotions, and work toward a sense of grounding and meaning.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div>
-            <div className="w-56 h-56 mx-auto mb-6 rounded-full overflow-hidden">
-              <Image
-                src="/images/immigrant.jpg"
-                alt="Therapy for Second Generation Individuals"
-                width={300}
-                height={300}
-                className="object-cover w-full h-full"
-              />
+            {/*Card 2*/}
+            <div className="group w-full md:w-[26rem] bg-[#B5D3D2] rounded-md p-4 border border-black shadow-sm overflow-hidden">
+              <div className="p-2 pr-6 transform transition-transform duration-300 group-hover:translate-x-6">
+                <img
+                  src="/images/couple.jpg"
+                  alt="Individual Counseling"
+                  className="w-full h-30 object-cover rounded-md mb-3"
+                />
+                <h3 className="text-sm font-bold text-[#2C4D4A] mb-1 leading-tight">
+                  Relationship Counseling 
+                </h3>
+                <p className="text-xs text-[#2C4D4A] mb-3 leading-tight">
+                  Strengthen communication, rebuild trust, and foster deeper emotional connection with compassionate guidance.
+                </p>
+                <button className="w-full border border-[#2C4D4A] text-[#2C4D4A] py-1.5 text-xs rounded-md hover:bg-[#2C4D4A] hover:text-white transition">
+                  Learn More
+                </button>
+              </div>
             </div>
-            <h3 className="text-lg font-medium mb-3">
-              Therapy for Second Generation Individuals <br /> In Immigrant Families
-            </h3>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              Second-generation individuals in immigrant families, born in the U.S. to at least one parent
-              born abroad, often navigate the complexities of multiple cultures and diverse expectations.
-              This experience can bring challenges such as feeling like a foreigner in your own country
-              and navigating strained family relationships. Therapy offers a supportive space to explore
-              and process this unique aspect of your identity.
-            </p>
-          </div>
 
+            {/* Card 3 */}
+            <div className="group w-full md:w-[26rem] bg-[#B5D3D2] rounded-md p-4 border border-black shadow-sm overflow-hidden">
+              <div className="p-2 pr-6 transform transition-transform duration-300 group-hover:translate-x-6">
+                <img
+                  src="/images/trauma.jpg"
+                  alt="Couples Counseling"
+                  className="w-full h-30 object-cover rounded-md mb-3"
+                />
+                <h3 className="text-sm font-bold text-[#2C4D4A] mb-1 leading-tight">
+                  Trauma Recovery 
+                </h3>
+                <p className="text-xs text-[#2C4D4A] mb-3 leading-tight">
+                  Heal from past wounds in a supportive environment, using faith-based and evidence-informed approaches to rebuild safety and self-worth.
+                </p>
+                <button className="w-full border border-[#2C4D4A] text-[#2C4D4A] py-1.5 text-xs rounded-md hover:bg-[#2C4D4A] hover:text-white transition">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Dark Teal CTA Section */}
+      <section className="w-full bg-[#2C4D4A] min-h-[140px] flex items-center px-6">
+        <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row md:items-center md:gap-6 gap-4">
+          <h3 className="text-[#B5D3D2] font-bold text-2xl whitespace-nowrap">
+            Schedule A Consultation
+          </h3>
+          <p className="text-[#B5D3D2] font-semibold text-xs flex flex-wrap items-center gap-2">
+            Dr. Serena Blake is currently accepting new clients. Available for online and in-person sessions.
+            <button className="flex items-center gap-1 border border-[#B5D3D2] text-[#B5D3D2] text-xs px-3 py-1.5 rounded-md hover:bg-[#B5D3D2] hover:text-[#2C4D4A] transition-colors duration-200">
+              <span>⭐</span> Start Healing
+            </button>
+          </p>
+        </div>
+      </section>
+    </div>
   );
 }
