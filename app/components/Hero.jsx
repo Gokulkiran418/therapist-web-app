@@ -47,7 +47,26 @@ export default function Hero() {
     obs.observe(node);
     return () => obs.disconnect();
   }, []);
+    const messages = [
+    "Anxiety Relief",
+    "Relationship Support",
+    "Trauma Recovery"
+  ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+    const [fade, setFade] = useState(true);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setFade(false);
+        setTimeout(() => {
+          setCurrentIndex((prev) => (prev + 1) % messages.length);
+          setFade(true);
+        }, 300); // fade-out duration
+      }, 2500); // 2.5s per cycle
+
+      return () => clearInterval(interval);
+    }, []);
   return (
     <>
       {/* Hero Section */}
@@ -55,45 +74,47 @@ export default function Hero() {
         className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
         style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
       >
-        <div className="relative z-10 px-4 mt-16 max-w-2xl">
-          <p className="text-sm mb-2 text-hero-text">
-            Christian Counseling Services in Richmond & Central Virginia
-          </p>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-hero-text">
-            Professional Counseling for Christian Healing and Growth
-          </h1>
-          <p className="text-lg mb-2 text-hero-text">
-            Begin your journey today towards spiritual growth, deeper relationships,
-            <br />
-            and lasting inner peace.
-          </p>
-          <p className="text-md mb-4 font-bold text-hero-text">
-            I want to work with you for...
-          </p>
-          <p className="text-md mb-4 text-hero-text flex items-center justify-center">
-            <span className="text-green-300 mr-2">🧭</span>
-            <span className="text-green-300 font-bold">
-              Greater Purpose in Your Life Direction
-            </span>
-          </p>
-          <div className="mt-6 text-sm text-hero-text flex flex-wrap justify-center gap-4">
-            <span className="inline-block underline hover:no-underline transition duration-300">
-              <span role="img" aria-label="star">⭐</span> Top Rated
-            </span>
-            <span className="inline-block underline hover:no-underline transition duration-300">
-              8 Years Experience
-            </span>
-            <span className="inline-block underline hover:no-underline transition duration-300">
-              Testimonials
-            </span>
-            <span className="inline-block underline hover:no-underline transition duration-300">
-              Media Mentions
-            </span>
-          </div>
-          <button className="px-6 py-3 mt-4 text-blue-800 rounded-lg bg-gradient-to-r from-white via-blue-50 to-pink-100 hover:from-blue-50 hover:via-pink-100 hover:to-white transition">
-            <span className="mr-2">★</span> Start Healing Today
-          </button>
-        </div>
+       <div className="relative z-10 px-4 mt-16 max-w-2xl">
+      <p className="text-sm mb-2 text-hero-text">
+        Professional Therapy Services in Los Angeles
+      </p>
+      <h1 className="text-3xl md:text-4xl font-bold mb-4 text-hero-text">
+        Supporting You Through Life’s Challenges with Care and Compassion
+      </h1>
+      <p className="text-lg mb-2 text-hero-text">
+        Whether you're navigating anxiety, relationship struggles, or healing from trauma,<br />
+        you're not alone—and change is possible.
+      </p>
+      <p className="text-md mb-4 font-bold text-hero-text">
+        I'm here to help you move forward with clarity and confidence.
+      </p>
+      <p className="text-md text-3xl mb-4 text-hero-text flex items-center justify-center h-6">
+      <span
+        className={`text-green-300 font-bold transition-all duration-500 ease-in-out transform ${
+          fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+        }`}
+      >
+        {messages[currentIndex]}
+      </span>
+    </p>
+      <div className="mt-6 text-sm text-hero-text flex flex-wrap justify-center gap-4">
+        <span className="inline-block underline hover:no-underline transition duration-300">
+          <span role="img" aria-label="star">⭐</span> Client Recommended
+        </span>
+        <span className="inline-block underline hover:no-underline transition duration-300">
+          {yearsCount || '8'} Years Experience
+        </span>
+        <span className="inline-block underline hover:no-underline transition duration-300">
+          Testimonials
+        </span>
+        <span className="inline-block underline hover:no-underline transition duration-300">
+          Media Mentions
+        </span>
+      </div>
+  <button className="px-6 py-3 mt-4 text-blue-800 rounded-lg bg-gradient-to-r from-white via-blue-50 to-pink-100 hover:from-blue-50 hover:via-pink-100 hover:to-white transition">
+    <span className="mr-2">★</span> Start Healing Today
+  </button>
+</div>
       </section>
 
       {/* Stats Section */}
