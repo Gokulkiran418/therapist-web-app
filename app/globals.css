@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.font-calligraphy {
+  font-family: 'Dancing Script', cursive;
+  font-style: italic;
+  color: #2C4D4A; /* Matches the teal-green shade in the image */
+}
 @layer base {
   body {
     @apply bg-white text-slate-900;
@@ -24,3 +31,46 @@
     animation: fadeIn 0.5s ease-out forwards;
   }
 }
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.animate-slide {
+  animation: slideFade 2s ease-in-out;
+}
+@keyframes slide-left-to-right-fade {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slide-left-to-right-fade {
+  animation: slide-left-to-right-fade 40s linear infinite;
+}
+
