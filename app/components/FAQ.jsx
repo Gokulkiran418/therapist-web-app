@@ -1,60 +1,74 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import React, { useState, useRef } from "react";
 
-const faqs = [
-  {
-    question: 'What services do you offer?',
-    answer: 'We offer web development, UI/UX design, and SEO optimization services tailored to your brand.',
-  },
-  {
-    question: 'How long does a project take?',
-    answer: 'Most projects take between 2–6 weeks depending on complexity, features, and client feedback speed.',
-  },
-  {
-    question: 'Do you provide support after launch?',
-    answer: 'Yes! We offer post-launch support, maintenance, and updates to ensure your site stays modern and secure.',
-  },
-];
+export default function FAQ() {
+  const faqs = [
+    {
+      question: "What are your fees?",
+      answer: "My fees are $60 for individual, $90 for couple.",
+    },
+    {
+      question: "Do you accept insurance?",
+      answer:
+        "No, but a superbill is provided for self-submission.",
+    },
+    {
+      question: "Are online sessions available?",
+      answer: "Yes—all virtual sessions via Zoom.",
+    },
+    {
+      question: "What is your cancellation policy?",
+      answer: "24-hour notice required.",
+    },
+    {
+      question: "What services do you offer?",
+      answer:
+        "My services focuses on areas such as Relationship Counseling, deepening relationships, healing past wounds, Trauma Recovery and discovering your life's purpose.",
+    },
+  ];
 
-const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const contentRefs = useRef([]);
 
   const toggle = (index) => {
-    setOpenIndex(index === openIndex ? null : index);
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
-    <section id="faq" className="w-full bg-gray-50 py-20">
-      <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+    <section className="bg-[#B5D3D2] w-full py-16 px-4">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-[#2C4D4A] mb-8">
           Frequently Asked Questions
         </h2>
 
-        <div className="space-y-6 max-w-3xl mx-auto">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white border border-slate-200 rounded-lg shadow-sm"
-            >
+            <div key={index} className="border-b border-[#2C4D4A]">
               <button
-                className="w-full text-left px-6 py-4 flex justify-between items-center"
+                className="w-full text-left flex justify-between items-center py-4 text-[#2C4D4A] font-semibold focus:outline-none"
                 onClick={() => toggle(index)}
               >
-                <span className="text-lg font-medium text-slate-800">{faq.question}</span>
-                <span className="text-2xl text-indigo-500">
-                  {openIndex === index ? '−' : '+'}
-                </span>
+                {faq.question}
+                <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
               </button>
-              {openIndex === index && (
-                <div className="px-6 pb-4 text-slate-600">{faq.answer}</div>
-              )}
+
+              <div
+                ref={(el) => (contentRefs.current[index] = el)}
+                className="overflow-hidden transition-all duration-300 ease-in-out"
+                style={{
+                  maxHeight:
+                    openIndex === index
+                      ? `${contentRefs.current[index]?.scrollHeight}px`
+                      : "0px",
+                }}
+              >
+                <p className="text-[#2C4D4A] text-sm pb-4 px-1">{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default FAQ;
+}
