@@ -1,18 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Imperial+Script&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
-.font-calligraphy {
-  font-family: 'Dancing Script', cursive;
-  font-style: italic;
-  color: #2C4D4A; /* Matches the teal-green shade in the image */
-}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 3rem;
 }
+
 
 @layer base {
   body {
