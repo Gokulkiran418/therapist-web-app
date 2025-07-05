@@ -1,11 +1,15 @@
+
 import './globals.css';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Christian Counseling Services',
-  description: 'Professional counseling for Christian healing and growth in Richmond & Central Virginia',
+  title: 'Dr. Serena Blake',
+  description: 'Professional counseling for Anxiety & Stress Management, Relationship Counseling, Trauma Recovery ',
+   icons: {
+    icon: "/handheart.svg",
+  },
 };
 
 export default function RootLayout({
