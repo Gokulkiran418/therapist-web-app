@@ -40,7 +40,7 @@ export default function FAQ() {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
-  const [animationData, setAnimationData] = useState<any>(null);
+const [animationData, setAnimationData] = useState<object | null>(null);
 
   useEffect(() => {
     fetch("/lottie/peace.json")
