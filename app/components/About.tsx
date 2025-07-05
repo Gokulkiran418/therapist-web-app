@@ -1,7 +1,26 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef, useState }  from 'react';
 
 export default function About() {
+  const testimonialRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+  const node = testimonialRef.current;
+  if (!node) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setIsVisible(entry.isIntersecting);
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(node);
+  return () => observer.disconnect();
+}, []);
+
+
   return (
     <>
       {/* About Section */}
@@ -58,9 +77,14 @@ export default function About() {
 
           <div className="overflow-hidden relative group">
             <div
-              className="flex space-x-8 animate-slide-left-to-right-fade group-hover:[animation-play-state:paused]"
-              style={{ width: "max-content" }}
+              ref={testimonialRef}
+              className={`flex space-x-8 animate-slide-left-to-right-fade`}
+              style={{
+                width: "max-content",
+                animationPlayState: isVisible ? 'running' : 'paused',
+              }}
             >
+
               <div className="w-64 bg-white rounded-xl p-6 shadow-lg flex-none transition-opacity duration-500">
                 <h3 className="text-sm font-semibold text-[#2C4D4A] mb-2">Samantha R.</h3>
                 <p className="text-sm text-gray-600">
