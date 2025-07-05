@@ -224,7 +224,7 @@ export default function Contact() {
               placeholder="e.g. Mornings"
             />
             <p className="text-xs italic text-[#2C4D4A] mt-1">
-              Let us know when you're available
+              Let us know when you&apos;re available
             </p>
             {errors.preferredTime && (
               <p className="text-xs text-red-600">{errors.preferredTime}</p>
@@ -262,7 +262,7 @@ export default function Contact() {
               className="h-4 w-4 text-[#2C4D4A] border-gray-300 rounded"
             />
             <label htmlFor="captcha" className="text-sm text-[#2C4D4A]">
-              I'm not a robot
+              I&apos;m not a robot
             </label>
           </div>
           {errors.captcha && (

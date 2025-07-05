@@ -82,14 +82,14 @@ export default function Hero() {
             Professional Therapy Services in Los Angeles
           </p>
           <h1 className=" md:text-3xl font-bold mb-4 text-hero-text">
-            Supporting You Through Life’s Challenges with Care and Compassion
+            Supporting You Through Life&apos;s Challenges with Care and Compassion
           </h1>
           <p className="text-base mb-2 text-hero-text">
-            Whether you're navigating anxiety, relationship struggles, or healing from trauma,<br />
-            you're not alone—and change is possible.
+            Whether you&apos;re navigating anxiety, relationship struggles, or healing from trauma,<br />
+            you&apos;re not alone—and change is possible.
           </p>
           <p className="text-md mb-4 font-bold text-hero-text">
-            I'm here to help you move forward with clarity and confidence.
+            I&apos;re here to help you move forward with clarity and confidence.
           </p>
           <p className="text-md text-3xl mb-4 text-hero-text flex items-center justify-center h-6">
             <span

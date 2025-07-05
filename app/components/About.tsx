@@ -27,16 +27,16 @@ export default function About() {
               About Dr. Serena Blake, PsyD - Licensed Clinical Psychologist in Los Angeles, CA
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Hi I'm Dr. Serena Blake
+              Hi I&apos;m Dr. Serena Blake
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              I’m a licensed clinical psychologist (PsyD) based in Los Angeles, CA, with eight years of experience and over 500 client sessions.
+              I&apos;m a licensed clinical psychologist (PsyD) based in Los Angeles, CA, with eight years of experience and over 500 client sessions.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
               I use evidence-based approaches—like cognitive-behavioral therapy and mindfulness—combined with compassionate, personalized care to help you overcome anxiety, strengthen relationships, and heal from trauma.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Whether we meet in my Maplewood Drive office or connect virtually via Zoom, I’m committed to creating a safe, supportive space where you can heal, grow, and thrive.
+              Whether we meet in my Maplewood Drive office or connect virtually via Zoom, I&apos;m committed to creating a safe, supportive space where you can heal, grow, and thrive.
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function About() {
               <div className="w-64 bg-white rounded-xl p-6 shadow-lg flex-none transition-opacity duration-500">
                 <h3 className="text-sm font-semibold text-[#2C4D4A] mb-2">Daniel K.</h3>
                 <p className="text-sm text-gray-600">
-                  “I’ve tried therapy before, but nothing compares to the safe space Dr. Blake creates. I finally feel heard, understood, and empowered.”
+                  “I&apos;ve tried therapy before, but nothing compares to the safe space Dr. Blake creates. I finally feel heard, understood, and empowered.”
                 </p>
               </div>
 

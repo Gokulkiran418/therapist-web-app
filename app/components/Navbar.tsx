@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { HiSparkles } from 'react-icons/hi';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { FaTree } from 'react-icons/fa'; 
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
