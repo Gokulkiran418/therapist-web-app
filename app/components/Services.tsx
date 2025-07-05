@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { HiSparkles } from 'react-icons/hi';
 
 export default function Services() {
   return (
@@ -83,10 +84,11 @@ export default function Services() {
           </h3>
           <p className="text-[#B5D3D2] font-semibold text-xs flex flex-wrap items-center gap-2">
             Dr. Serena Blake is currently accepting new clients. Available for online and in-person sessions.
-            <button className="flex items-center gap-1 border border-[#B5D3D2] text-[#B5D3D2] text-xs px-3 py-1.5 rounded-md hover:bg-[#B5D3D2] hover:text-[#2C4D4A] transition-colors duration-200">
-              <span>⭐</span> Start Healing
-            </button>
-          </p>
+           <button className="flex items-center gap-1 border border-[#B5D3D2] text-[#B5D3D2] text-xs px-3 py-1.5 rounded-md hover:bg-[#B5D3D2] hover:text-[#2C4D4A] transition-colors duration-200">
+            <HiSparkles className="text-sm" />
+            Start Healing
+          </button>
+            </p>
         </div>
       </section>
     </div>
