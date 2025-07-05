@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { HiX, HiSparkles } from 'react-icons/hi';
+import Image from 'next/image';
 
 export default function Services() {
      const [activeModal, setActiveModal] = useState<null | number>(null);
@@ -58,11 +59,15 @@ return (
               className="group w-full md:w-[26rem] bg-[#B5D3D2] rounded-md p-4 border border-black shadow-sm overflow-hidden"
             >
               <div className="p-2 pr-6 transform transition-transform duration-300 group-hover:translate-x-6">
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="w-full h-30 object-cover rounded-md mb-3"
-                />
+                <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                  <Image
+                    src={service.img}
+                    alt={service.title}
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 416px"
+                  />
+                </div>
                 <h3 className="text-sm font-bold text-[#2C4D4A] mb-1 leading-tight">
                   {service.title}
                 </h3>

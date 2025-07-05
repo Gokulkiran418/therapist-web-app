@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { HiSparkles } from 'react-icons/hi';
+import Image from 'next/image';
 
 export default function Hero() {
   const [yearsCount, setYearsCount] = useState<number>(0);
@@ -72,11 +73,18 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section
-        id="hero"
-        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
-      >
+      <section id="hero" className="relative w-full h-screen flex items-center justify-center text-center text-white">
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/images/hero-bg.jpg"
+            alt="Therapy background"
+            fill
+            priority
+            quality={75}
+            className="object-cover"
+          />
+        </div>
         <div className="relative z-10 px-4 mt-16 max-w-2xl">
           <p className="text-sm mb-2 text-hero-text">
             Professional Therapy Services in Los Angeles
