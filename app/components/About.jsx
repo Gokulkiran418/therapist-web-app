@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 
 export default function About() {
@@ -91,7 +92,7 @@ export default function About() {
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-[#2C4D4A] mb-2">Latest Blogs</h2>
             <p className="text-gray-700 max-w-xl">
-              Discover helpful insights and strategies from Ellie Shumaker to improve your
+              Discover helpful insights and strategies from Serena Blake to improve your
               relationships and personal well-being.
             </p>
           </div>
