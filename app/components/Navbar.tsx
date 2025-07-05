@@ -56,7 +56,7 @@ export default function Navbar() {
       </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex space-x-6 text-[#2C4D4A] text-sm font-medium items-center">
+          <div className="hidden md:flex space-x-6 text-[#2C4D4A] text-sm items-center">
             <div className="relative group">
               <button className="hover:text-yellow-400 transition">Services</button>
               <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">

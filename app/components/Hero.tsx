@@ -81,10 +81,10 @@ export default function Hero() {
           <p className="text-sm mb-2 text-hero-text">
             Professional Therapy Services in Los Angeles
           </p>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-hero-text">
+          <h1 className=" md:text-3xl font-bold mb-4 text-hero-text">
             Supporting You Through Life’s Challenges with Care and Compassion
           </h1>
-          <p className="text-lg mb-2 text-hero-text">
+          <p className="text-base mb-2 text-hero-text">
             Whether you're navigating anxiety, relationship struggles, or healing from trauma,<br />
             you're not alone—and change is possible.
           </p>
@@ -93,7 +93,7 @@ export default function Hero() {
           </p>
           <p className="text-md text-3xl mb-4 text-hero-text flex items-center justify-center h-6">
             <span
-              className={`text-green-300 font-bold transition-all duration-500 ease-in-out transform ${
+              className={`text-teal-100 text-2xl font-bold transition-all duration-500 ease-in-out transform ${
                 fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
               }`}
             >
